@@ -2,7 +2,7 @@ from agents.planner import PlannerAgent
 
 
 def main():
-    task = input("请输入需要 Agent 完成的任务: ")
+    task = input("🤖 Mini Agent > 请输入需要 Agent 完成的任务: ")
 
     planner = PlannerAgent()
     plan = planner.plan(task)
