@@ -1,4 +1,5 @@
 from agents.planner import PlannerAgent
+from agents.worker import WorkerAgent
 
 
 def main():
@@ -12,6 +13,15 @@ def main():
     for index, step in enumerate(plan, start=1):
         print(f"{index}. {step}")
 
+    worker = WorkerAgent()
+    results = worker.execute(plan)
+
+    print("\nWorker Agent 开始执行任务：")
+
+    for result in results:
+        print(result)
+
 
 if __name__ == "__main__":
     main()
+    
