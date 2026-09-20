@@ -14,7 +14,12 @@ def main():
         print(f"{index}. {step}")
 
     worker = WorkerAgent()
-    worker.execute(plan)
+    results = worker.execute(plan)
+
+    print("\nWorker Agent 开始执行任务：")
+
+    for result in results:
+        print(result)
 
 
 if __name__ == "__main__":
